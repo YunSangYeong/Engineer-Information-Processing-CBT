@@ -1,0 +1,25 @@
+[
+  {
+    "id": "LOCAL-EXAMPLE-001",
+    "subject": "소프트웨어 설계",
+    "topic": "요구사항",
+    "question": "[직접 작성 예제] 요구사항을 기능과 품질 요구로 나누는 주된 이유는?",
+    "choices": [
+      "시스템의 동작과 품질 제약을 구분해 명확히 검증하기 위해",
+      "테스트를 없애기 위해",
+      "사용자 검토를 금지하기 위해",
+      "구현 언어를 항상 하나로 제한하기 위해"
+    ],
+    "answer": 1,
+    "explanation": "기능과 품질 속성은 검증 관점이 다르므로 명확한 기준을 두어 관리한다.",
+    "difficulty": "하",
+    "year": null,
+    "session": null,
+    "type": "original",
+    "sourceUrl": "https://github.com/YunSangYeong/Engineer-Information-Processing-CBT/blob/main/docs/verification.md",
+    "verificationStatus": "pending",
+    "reviewNote": "등록 양식 예제. 사용 전 출처·권한·정답 검수 필요.",
+    "version": "main",
+    "rights": "자체 제작 · CC BY 4.0 · 정보처리기사 CBT contributors; 변경 표시 및 출처 표기 필요."
+  }
+]

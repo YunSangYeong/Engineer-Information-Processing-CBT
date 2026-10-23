@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "standard": {
+    "name": "cbt-site-standard",
+    "version": "1.4.0",
+    "referenceRepository": "YunSangYeong/electrician-cbt",
+    "referenceCommit": "b9a682ccff1b460334b78d5bfad9375b7ec4fbb6"
+  },
+  "qualification": {
+    "name": "정보처리기사",
+    "slug": "information-processing-engineer",
+    "officialIssuer": "한국산업인력공단",
+    "rulesVerificationStatus": "pending-official-source",
+    "officialSources": [
+      "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1320"
+    ],
+    "verifiedAt": null
+  },
+  "exam": {
+    "questionCount": 100,
+    "durationMinutes": 150,
+    "choiceCount": 4,
+    "subjects": [
+      {
+        "name": "소프트웨어 설계",
+        "questionCount": 20
+      },
+      {
+        "name": "소프트웨어 개발",
+        "questionCount": 20
+      },
+      {
+        "name": "데이터베이스 구축",
+        "questionCount": 20
+      },
+      {
+        "name": "프로그래밍 언어 활용",
+        "questionCount": 20
+      },
+      {
+        "name": "정보시스템 구축관리",
+        "questionCount": 20
+      }
+    ],
+    "selectionPolicy": "reviewed-only; subject quota 20; random order; prefer one per family, then fill unique IDs",
+    "scoring": {
+      "maxScore": 100,
+      "passScore": 60,
+      "hasSubjectCutoff": true,
+      "subjectCutoffs": [
+        {
+          "subject": "소프트웨어 설계",
+          "score": 40
+        },
+        {
+          "subject": "소프트웨어 개발",
+          "score": 40
+        },
+        {
+          "subject": "데이터베이스 구축",
+          "score": 40
+        },
+        {
+          "subject": "프로그래밍 언어 활용",
+          "score": 40
+        },
+        {
+          "subject": "정보시스템 구축관리",
+          "score": 40
+        }
+      ],
+      "unansweredPolicy": "incorrect"
+    }
+  },
+  "questionBank": {
+    "defaultBankId": "main",
+    "targetReviewedCount": 1000,
+    "importedDefaultStatus": "pending",
+    "types": [
+      "past",
+      "reconstructed",
+      "original"
+    ],
+    "allowNumericVariants": false,
+    "reportVariantFamiliesAndCounts": true,
+    "actualReviewedCount": 100,
+    "shortfall": 900
+  },
+  "ui": {
+    "locale": "ko-KR",
+    "showStudyCriteriaSelector": false,
+    "showBankYearRange": false,
+    "nextQuestionShortcut": "Space",
+    "shortcutModes": [
+      "exam",
+      "practice"
+    ],
+    "requireAnswerBeforeGlobalShortcut": true,
+    "autoSubmitLastQuestionOnSpace": false,
+    "officialBranding": false,
+    "showTopDisclaimerBanner": false,
+    "disclosureLocations": [
+      "footer-or-sidebar",
+      "question-bank-or-source-details",
+      "documentation"
+    ],
+    "showActionableStorageErrors": true,
+    "mobileMenuScrollable": true,
+    "mobileMenuSmallHeightRegressionRequired": true,
+    "mobileMenuTouchScrollVerificationRequired": true
+  },
+  "storage": {
+    "namespace": "information-processing-engineer-cbt:v1",
+    "schemaVersion": 1,
+    "maxAttempts": 5000,
+    "maxExamResults": 30
+  },
+  "deployment": {
+    "provider": "github-pages",
+    "repository": "YunSangYeong/Engineer-Information-Processing-CBT",
+    "branch": "main",
+    "basePath": "/Engineer-Information-Processing-CBT/",
+    "publicUrl": "https://YunSangYeong.github.io/Engineer-Information-Processing-CBT/",
+    "blogIframe": true,
+    "executedBy": "agent-when-authorized",
+    "trigger": "push-main-after-validation",
+    "automaticDeploymentOnPush": true,
+    "agentMayExecuteDeployment": true,
+    "requiresUserDeploymentRequest": true,
+    "maxDeploymentAttempts": 1,
+    "stopOnFirstBlock": true,
+    "userRole": "initial-settings-or-required-approval-only",
+    "explicitUserRestrictionsTakePrecedence": true,
+    "currentAttemptStatus": "blocked-preflight-CONNECT-403",
+    "executedPipelineCount": 0
+  }
+}
