@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import { expect, test, type Page } from "@playwright/test";
 import bank from "../../src/data/questions-main.json" with { type: "json" };
 const key = "information-processing-engineer-cbt:v1";
@@ -32,7 +33,7 @@ test("학습 기준 선택 제거·모바일 화면·이전 선택 복원", asyn
       () => document.documentElement.scrollWidth <= window.innerWidth,
     ),
   ).toBe(true);
-  await expect(page.locator(".bank-summary")).toContainText(/등록\s*100문항/);
+  await expect(page.locator(".bank-summary")).toContainText(/등록\s*1000문항/);
   await expect(page.getByLabel("학습 기준")).toHaveCount(0);
   await expect(page.locator("main")).not.toContainText("학습 기준");
   await expect(page.locator("main")).not.toContainText("2027–2029");
@@ -195,7 +196,7 @@ test("JSON 등록·중복 제거·검수 대기·사용자 검수·CSV 등록·�
   await expectNoDefaultVersionYears(page);
   await expect(page.locator(".bank-filter")).toContainText("문제은행");
   await expect(page.locator(".bank-row")).toHaveCount(20);
-  await expect(page.locator(".pagination")).toContainText("1 / 5");
+  await expect(page.locator(".pagination")).toContainText("1 / 50");
   await page.getByLabel("문항 검색", { exact: true }).fill("IPE-1-001");
   await expect(page.locator(".bank-row")).toHaveCount(1);
   await page.locator(".bank-row summary").click();
@@ -203,6 +204,20 @@ test("JSON 등록·중복 제거·검수 대기·사용자 검수·CSV 등록·�
   await expect(page.locator(".bank-row .explanation")).toContainText(
     "AI 일반 지식",
   );
+  await page.getByLabel("문항 검색", { exact: true }).fill("IPE-5-200");
+  await expect(page.locator(".bank-row")).toHaveCount(1);
+  await page.locator(".bank-row summary").click();
+  await expect(page.locator(".bank-row .explanation")).toContainText("API 게이트웨이");
+  await expect(page.locator(".bank-row .explanation")).toContainText("다른 보기와의 구별");
+  await expect(page.locator(".rule-disclosure")).toContainText("기본 내부 검수 1000 / 목표 1,000 · 부족 0");
+  const exporting = page.waitForEvent("download");
+  await page.getByRole("button", { name: "전체 문항 내보내기", exact: true }).click();
+  const exportPath = await (await exporting).path();
+  const exported = JSON.parse(await readFile(exportPath!, "utf8"));
+  expect(exported).toHaveLength(1000);
+  for (const subject of new Set(bank.map(q=>q.subject))) {
+    expect(exported.filter((q:{subject:string})=>q.subject===subject)).toHaveLength(200);
+  }
   await page.getByLabel("문항 검색", { exact: true }).fill("");
   const custom = {
     ...bank[0],

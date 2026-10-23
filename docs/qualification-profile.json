@@ -83,8 +83,8 @@
     ],
     "allowNumericVariants": false,
     "reportVariantFamiliesAndCounts": true,
-    "actualReviewedCount": 100,
-    "shortfall": 900
+    "actualReviewedCount": 1000,
+    "shortfall": 0
   },
   "ui": {
     "locale": "ko-KR",

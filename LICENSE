@@ -24,7 +24,7 @@ Original upstream code copyright and MIT notice are retained above.
 Adapted application code: Copyright (c) 2026 information-processing-engineer-cbt contributors.
 
 New question data in src/data/questions-main.json, its manuscript in
-scripts/generate-bank.py, and adapted public/templates are original AI-assisted
+scripts/generate-bank.py and scripts/manuscripts/, and adapted public/templates are original AI-assisted
 learning material, licensed under CC BY 4.0:
 https://creativecommons.org/licenses/by/4.0/
 Attribute: 정보처리기사 CBT contributors, link to

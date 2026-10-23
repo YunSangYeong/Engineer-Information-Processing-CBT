@@ -1,5 +1,6 @@
 """직접 작성 원고. 외부 문항을 복제하지 않는다. 순서/ID/보기 배치 결정적."""
-import json, csv
+import json, csv, hashlib, random, unicodedata
+from collections import Counter
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SUBJECTS = ['소프트웨어 설계','소프트웨어 개발','데이터베이스 구축','프로그래밍 언어 활용','정보시스템 구축관리']
@@ -116,6 +117,59 @@ for si, text in enumerate(MANUSCRIPT):
         shift=(si+i)%4
         choices=choices[shift:]+choices[:shift]
         questions.append(dict(id=f'IPE-{si+1}-{i+1:03d}',subject=SUBJECTS[si],topic=topic,question=stem,choices=choices,answer=choices.index(correct)+1,explanation=explanation,difficulty='하' if i<10 else '중',year=None,session=None,type='original',sourceUrl='https://github.com/YunSangYeong/Engineer-Information-Processing-CBT/blob/main/docs/verification.md',verificationStatus='reviewed',reviewNote='AI 일반 지식을 바탕으로 직접 작성. 정답·오답·해설 문장 내부 검토, 외부 전문가 검수 및 공식 출제기준 대조 미완료. 기출 아님.',version='main',rights='자체 제작 · CC BY 4.0 · 정보처리기사 CBT contributors; 변경 표시 및 출처 표기 필요.'))
+# 추가 원고: 각 줄은 서로 다른 학습 목표이며 뒤집기·보기 재배치만으로 문항을 늘리지 않는다.
+# topic별 6개 개념 중 다른 3개를 오답으로 사용하고 ID의 해시로 보기 순서를 고정한다.
+for si, subject in enumerate(SUBJECTS, 1):
+    path = ROOT / f"scripts/manuscripts/subject-{si}.txt"
+    groups = path.read_text().split("## ")[1:]
+    assert len(groups) == 30, f"{path}: 30개 단원이 필요합니다."
+    number = 20
+    objectives = set()
+    for group_index, group in enumerate(groups):
+        lines = group.strip().splitlines()
+        topic = lines[0]
+        records = [tuple(line.split("|")) for line in lines[1:]]
+        assert len(records) == 6 and all(len(row) == 2 for row in records)
+        for index, (term, definition) in enumerate(records):
+            assert term not in objectives, (subject, term)
+            objectives.add(term)
+            number += 1
+            qid = f"IPE-{si}-{number:03d}"
+            others = [record for n, record in enumerate(records) if n != index]
+            rng = random.Random(int(hashlib.sha256(qid.encode()).hexdigest(), 16))
+            options = [(term, definition)] + rng.sample(others, 3)
+            rng.shuffle(options)
+            choices = [item[0] for item in options]
+            contrasts = "\n".join(f"- {label}: {meaning}" for label, meaning in options if label != term)
+            questions.append(dict(
+                id=qid, subject=subject, topic=topic,
+                question=f"다음 설명에 가장 정확히 해당하는 항목은?\n{definition}",
+                choices=choices, answer=choices.index(term)+1,
+                explanation=f"정답은 {term}이다. {definition}\n\n다른 보기와의 구별:\n{contrasts}",
+                difficulty="하" if group_index < 15 else "중",
+                year=None, session=None, type="original",
+                sourceUrl="https://github.com/YunSangYeong/Engineer-Information-Processing-CBT/blob/codex/information-processing-cbt/docs/verification.md",
+                verificationStatus="reviewed",
+                reviewNote="AI 일반 지식으로 직접 작성한 개념 구별 문항. 원고의 정의·정답·오답 의미 및 해설을 내부 재검토. 외부 전문가 검수 및 공식 출제기준 대조 미완료. 기출 아님.",
+                version="main", rights=questions[0]["rights"],
+                learningObjective=f"{subject}/{topic}/{term}",
+            ))
+    assert number == 200
+
+# 생성 시에도 수량·고유 ID·본문/보기 중복·학습 목표를 검증한다.
+def normalized(value):
+    return "".join(unicodedata.normalize("NFKC", value).lower().split())
+
+def fingerprint(q):
+    return normalized("|".join([q["question"], *sorted(q["choices"])]))
+
+assert len(questions) == 1000
+assert len({q["id"] for q in questions}) == 1000
+assert len({normalized(q["question"]) for q in questions}) == 1000
+assert len({fingerprint(q) for q in questions}) == 1000
+assert all(count == 200 for count in Counter(q["subject"] for q in questions).values())
+assert all(len(q["choices"]) == len(set(q["choices"])) == 4 and 1 <= q["answer"] <= 4 for q in questions)
+
 # 개념 문항만 수록. 수량을 채우기 위한 조건·숫자 변형을 생성하지 않는다.
 (ROOT/'src/data').mkdir(exist_ok=True)
 (ROOT/'src/data/questions-main.json').write_text(json.dumps(questions,ensure_ascii=False,indent=2)+'\n')
@@ -124,4 +178,4 @@ example={**questions[0], 'id':'LOCAL-EXAMPLE-001','question':'[직접 작성 예
 fields=[k for k in example if k!='choices']; fields[fields.index('answer'):fields.index('answer')]=['choice1','choice2','choice3','choice4']
 with (ROOT/'public/templates/questions.csv').open('w',newline='') as f:
     w=csv.DictWriter(f,fieldnames=fields,lineterminator="\n");w.writeheader();w.writerow({**{k:('' if v is None else v) for k,v in example.items() if k!='choices'},**{f'choice{i+1}':v for i,v in enumerate(example['choices'])}})
-print(f'{len(questions)} authored concepts; 0 past, 0 reconstructed, 0 numeric variants; shortfall {1000-len(questions)}')
+print(f'{len(questions)} original reviewed questions; 0 past, 0 reconstructed, 0 numeric variants; shortfall {max(0,1000-len(questions))}')

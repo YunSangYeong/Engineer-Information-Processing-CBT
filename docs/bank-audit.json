@@ -1,0 +1,909 @@
+{
+  "bankSha256": "3f10ba2f07cca37073298dba280ada3c9fe0881b5788d75f2f6bcce12380ba01",
+  "count": 1000,
+  "target": 1000,
+  "shortfall": 0,
+  "perSubject": {
+    "소프트웨어 설계": 200,
+    "소프트웨어 개발": 200,
+    "데이터베이스 구축": 200,
+    "프로그래밍 언어 활용": 200,
+    "정보시스템 구축관리": 200
+  },
+  "types": {
+    "original": 1000
+  },
+  "past": 0,
+  "reconstructed": 0,
+  "numericVariants": 0,
+  "numericFamilies": 0,
+  "internalReviewed": 1000,
+  "pending": 0,
+  "expertReviewed": 0,
+  "officialCriteriaCrossCheck": "not-completed",
+  "exactNormalizedDuplicates": 0,
+  "legacy100Preserved": true,
+  "authorship": "AI general knowledge; original educational material; no external source claimed",
+  "reviewLimit": "Internal AI editorial recheck and structural audit. Similarity candidates are manually dispositioned by this agent; neither expert validation nor a semantic-duplicate guarantee.",
+  "addedLearningObjectives": 900,
+  "addedTopicGroups": [
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "요구사항 수집",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "분석 산출물",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "요구사항 명세 품질",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "요구사항 관리",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "개발 생명주기",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "스크럼 역할과 산출물",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "스크럼 이벤트와 합의",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "익스트림 프로그래밍 실천",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "DFD 구성 요소",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "UML 관계와 표기",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "UML 행위 모델",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "UML 정적 구조와 배치",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "유스케이스 및 상태 요소",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "객체 분석 관점",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "모듈 응집도",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "모듈 결합도",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "객체지향 책임 설계",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "생성 패턴",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "구조 패턴",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "행위 패턴 1",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "행위 패턴 2와 도메인",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "아키텍처 스타일",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "품질 속성 설계",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "사용자 경험 설계",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "사용성 원칙",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "접근성 세부 설계",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "시스템 인터페이스 설계",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "서비스 계약과 메시지",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "설계 검토 및 의사결정",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 설계",
+      "topic": "상세 설계 표현",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "순차 자료와 주소",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "연결 자료의 구성",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "스택과 큐의 경계",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "트리 기본 구조",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "트리 순회와 복원",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "균형과 힙 연산",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "그래프 표현과 성질",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "그래프 알고리즘",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "정렬 절차",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "알고리즘 선택 성질",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "탐색과 해싱",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "시간·공간 분석",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "통합 테스트 접근",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "구조 기반 테스트 기준",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "명세 기반 기법",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "테스트 목적 구분",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "정적 품질 활동",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "결함과 장애",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "테스트 관리 산출물",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "Git 작업 구분",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "형상 관리 개념",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "빌드 파이프라인",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "의존성과 배포 자료",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "패키징과 배포 방식",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "코드 구조 개선",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "디버깅과 자원 관리",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "테스트 자동화 격리",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "입력·오류 경계 검증",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "비기능 실행 테스트",
+      "added": 6
+    },
+    {
+      "subject": "소프트웨어 개발",
+      "topic": "프로그램 품질 측정",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "데이터 설계 단계",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "데이터 독립성과 메타데이터",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "ER 모델 개체와 속성",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "ER 관계 제약",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "키의 선택과 구조",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "관계대수 기본 연산",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "관계대수와 집합 의미",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 조회 조건",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 표현식과 함수",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 집계의 차이",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 조인 보존 방향",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 하위 질의",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 결과 결합과 순서",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 데이터 변경",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 스키마 정의",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "SQL 무결성 제약",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "함수 종속 분석",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "정규형과 분해",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "이상 현상과 분할",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "트랜잭션 제어",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "동시성 이상 현상",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "격리 수준과 버전",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "데이터 잠금",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "교착과 동시성 정책",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "장애 복구 방식",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "인덱스 구조",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "질의 최적화",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "저장 구조와 성능",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "분산 데이터 구성",
+      "added": 6
+    },
+    {
+      "subject": "데이터베이스 구축",
+      "topic": "비관계형 데이터 모델",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "C 자료형과 선언",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "C 연산과 흐름",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "C 포인터와 배열",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "C 동적 메모리와 파일",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "C 함수와 수명",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "Java 타입과 객체",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "Java 접근과 한정",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "Java 라이브러리와 예외",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "Java 컬렉션",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "Python 기본 자료",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "Python 시퀀스 연산",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "Python 흐름과 함수",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "Python 예외와 반복",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "운영체제 서비스",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "프로세스 상태와 제어",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "CPU 스케줄링",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "동기화 도구",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "교착 대응",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "메모리 배치",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "가상 기억장치 세부",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "파일 시스템 구조",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "전송과 교환 방식",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "계층별 전달 단위",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "로컬 네트워크 장비",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "IP 주소와 분할",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "인터넷 제어와 라우팅",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "신뢰 전송과 흐름",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "응용 프로토콜",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "네트워크 오류와 도구",
+      "added": 6
+    },
+    {
+      "subject": "프로그래밍 언어 활용",
+      "topic": "프로세스 사이 통신",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "보안 주체와 증명",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "자산·위험 관리",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "접근 통제 모델",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "인증 정보 방어",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "대칭 암호의 구성",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "공개키와 서명 알고리즘",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "암호 운용과 무결성",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "인증서와 PKI",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "TLS와 신뢰 경계",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "서버 입력 취약점",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "브라우저 보안 정책",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "메모리 방어 기법",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "네트워크 공격",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "악성 코드 구분",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "보안 검증 방법",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "보안 운영 체계",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "키와 비밀 관리",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "시스템 강화",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "가상화와 컨테이너",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "클라우드 제공과 구성",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "확장과 상태",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "장애 격리와 복원력",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "저장 장치 구성",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "백업과 복구 검증",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "관측성과 서비스 목표",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "개발 규모와 계획",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "일정 통제",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "획득가치 관리",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "운영 자동화",
+      "added": 6
+    },
+    {
+      "subject": "정보시스템 구축관리",
+      "topic": "기업 시스템 연계",
+      "added": 6
+    }
+  ],
+  "nearTextCandidates": [
+    {
+      "ids": [
+        "IPE-4-014",
+        "IPE-4-015"
+      ],
+      "characterTrigramJaccard": 0.714,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "TCP와 UDP의 서로 다른 전송 보장 특성을 구분한다."
+    },
+    {
+      "ids": [
+        "IPE-4-006",
+        "IPE-5-005"
+      ],
+      "characterTrigramJaccard": 0.55,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "질문 어미만 비슷하며 프로세스와 대칭키 암호의 다른 개념이다."
+    },
+    {
+      "ids": [
+        "IPE-3-018",
+        "IPE-5-013"
+      ],
+      "characterTrigramJaccard": 0.419,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "일반적인 설명이라는 질문 틀만 비슷하며 SQL 뷰와 침입 탐지·차단의 다른 개념이다."
+    },
+    {
+      "ids": [
+        "IPE-5-016",
+        "IPE-5-017"
+      ],
+      "characterTrigramJaccard": 0.714,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "RPO의 데이터 손실 시점과 RTO의 서비스 복구 소요 시간을 구분한다."
+    },
+    {
+      "ids": [
+        "IPE-1-096",
+        "IPE-1-097"
+      ],
+      "characterTrigramJaccard": 0.405,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "상태 진입 동작과 이탈 동작은 실행 시점과 목적이 다르다."
+    },
+    {
+      "ids": [
+        "IPE-2-059",
+        "IPE-2-060"
+      ],
+      "characterTrigramJaccard": 0.409,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "방향 그래프의 진입 차수와 진출 차수는 다른 지표이다."
+    },
+    {
+      "ids": [
+        "IPE-3-054",
+        "IPE-3-056"
+      ],
+      "characterTrigramJaccard": 0.405,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "관계대수 합집합과 교집합은 서로 다른 집합 연산이다."
+    },
+    {
+      "ids": [
+        "IPE-3-066",
+        "IPE-3-067"
+      ],
+      "characterTrigramJaccard": 0.405,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "LIKE의 한 문자 패턴과 임의 길이 패턴이라는 서로 다른 연산 의미를 구분한다."
+    },
+    {
+      "ids": [
+        "IPE-3-081",
+        "IPE-3-082"
+      ],
+      "characterTrigramJaccard": 0.641,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "LEFT OUTER JOIN과 RIGHT OUTER JOIN의 보존 방향이 다르다."
+    },
+    {
+      "ids": [
+        "IPE-3-089",
+        "IPE-3-090"
+      ],
+      "characterTrigramJaccard": 0.486,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "EXISTS와 NOT EXISTS의 서로 다른 존재 조건을 구분한다."
+    },
+    {
+      "ids": [
+        "IPE-3-091",
+        "IPE-3-092"
+      ],
+      "characterTrigramJaccard": 0.463,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "ANY의 존재 비교와 ALL의 전칭 비교를 구분한다."
+    },
+    {
+      "ids": [
+        "IPE-3-103",
+        "IPE-3-104"
+      ],
+      "characterTrigramJaccard": 0.765,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "WHERE 없는 UPDATE의 전체 수정과 DELETE의 전체 삭제를 각각 구분한다."
+    },
+    {
+      "ids": [
+        "IPE-4-090",
+        "IPE-4-091"
+      ],
+      "characterTrigramJaccard": 0.417,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "*args의 위치 인자 튜플과 **kwargs의 키워드 인자 딕셔너리를 구분한다."
+    },
+    {
+      "ids": [
+        "IPE-5-155",
+        "IPE-5-156"
+      ],
+      "characterTrigramJaccard": 0.489,
+      "internalDisposition": "distinct-learning-targets",
+      "reason": "RAID 5와 RAID 6의 서로 다른 패리티·장애 허용 방식을 구분한다. 숫자만 바꿔 같은 수식에 넣은 변형이 아니다."
+    }
+  ]
+}

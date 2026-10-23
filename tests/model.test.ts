@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import {
   answerExam,
@@ -20,13 +21,29 @@ import {
 } from "../src/model";
 const bank = BASE_BANK;
 describe("문제은행 품질", () => {
-  it("100개 자체 제작·5과목 각20개·중복 없음·부족900개를 정직하게 집계", () => {
-    expect(bank).toHaveLength(100);
-    expect(new Set(bank.map(q => q.id)).size).toBe(100);
-    expect(new Set(bank.map(fingerprint)).size).toBe(100);
-    for (const subject of SUBJECTS) expect(bank.filter(q=>q.subject===subject)).toHaveLength(20);
+  it("1000개 자체 제작·5과목 각200개·중복 없음·부족0개 집계", () => {
+    expect(bank).toHaveLength(1000);
+    expect(new Set(bank.map(q => q.id)).size).toBe(1000);
+    expect(new Set(bank.map(fingerprint)).size).toBe(1000);
+    for (const subject of SUBJECTS) expect(bank.filter(q=>q.subject===subject)).toHaveLength(200);
     expect(bank.filter(q=>q.type!=="original" || q.family)).toHaveLength(0);
-    expect(1000-bank.length).toBe(900);
+    expect(1000-bank.length).toBe(0);
+  });
+  it("기존 100문항의 ID·보기·정답·해설 및 전체 메타데이터 보존", () => {
+    expect(createHash("sha256").update(JSON.stringify(bank.slice(0,100))).digest("hex"))
+      .toBe("6f99d1e1b9eae6fe36e4d304176f85b0bb1584b66c7f20c7a1964989d9bb30e7");
+  });
+  it("추가900개는 고유 학습목표·오답별 구별 해설을 가지며 숫자변형이 아니다", () => {
+    const added=bank.slice(100);
+    expect(added).toHaveLength(900);
+    expect(new Set(added.map(q=>q.learningObjective)).size).toBe(900);
+    for (const q of added) {
+      expect(q.learningObjective?.split("/").at(-1)).toBe(q.choices[q.answer-1]);
+      expect(q.family).toBeUndefined();
+      expect(q.calculation).toBeUndefined();
+      expect(q.explanation).toContain("다른 보기와의 구별:");
+      for (const choice of q.choices) expect(q.explanation).toContain(choice);
+    }
   });
   for (const q of bank) it(`문항 검증 ${q.id}`, () => {
     expect(() => validateQuestion(q)).not.toThrow();
@@ -124,12 +141,12 @@ describe("랜덤 학습", () => {
   it("한 과목의 모든 문항을 순회하기 전에는 중복이 없다", () => {
     let p = startPractice(bank, "main", "소프트웨어 설계");
     const ids = new Set<string>();
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 200; i++) {
       expect(ids.has(p.currentId)).toBe(false);
       ids.add(p.currentId);
       p = nextPractice(p, bank);
     }
-    expect(ids.size).toBe(20);
+    expect(ids.size).toBe(200);
     expect(p.subject).toBe("소프트웨어 설계");
   });
   it("즉시 채점·연속 정답·통계를 저장하며 중복 채점을 방지한다", () => {

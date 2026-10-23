@@ -20,6 +20,7 @@ export interface Question {
   reviewNote: string;
   version: Version;
   rights: string;
+  learningObjective?: string;
   family?: string;
   calculation?: {
     kind: string;
